@@ -71,6 +71,14 @@ module RealmDefense
       @client.get('/v5/static/tn_whitelist')
     end
 
+    def tn_grandmasters(season)
+      @client.get("/v5/static/tn/s#{season}/GrandMasters")
+    end
+
+    def tn_grandmasters_latest
+      @client.get('/v5/static/tn/GrandMastersLatest')
+    end
+
     def mail_new_inbox_reward
       @client.get('/v5/static/mail/newInboxReward')
     end
@@ -93,6 +101,14 @@ module RealmDefense
 
     def event_divine_star
       @client.get('/v5/static/event/divine_star')
+    end
+
+    def event_blessed_hero_bundle
+      @client.get('/v5/static/event/blessedHeroBundle')
+    end
+
+    def counter_get
+      @client.get('/v5/counter/get')
     end
   end
 end
